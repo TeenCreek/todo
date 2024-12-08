@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Пользовательская ошибка 403{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h1>Произошла ошибка 403 CSRF. Попробуйте вернуться позже</h1>
+      <a class="btn btn-back" href="{% url 'task_list' %}">Вернуться на главную</a>
+    </div>
+  </section>
+{% endblock %} 

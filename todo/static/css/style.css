@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f4f4f9;
+  font-size: 16px;
+
+  display: grid;
+  row-gap: 50px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-add-task {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: bisque;
+}
+
+.header__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.header__box span {
+  color: #c53f3b;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.task-link:hover {
+  text-decoration: underline;
+}
+
+.task-info span {
+  font-size: 14px;
+  color: #666;
+}
+
+.task-status {
+  color: #28a745;
+  text-align: center;
+}
+
+/* Стили для пустого списка задач */
+.task-list p {
+  font-size: 12px;
+  color: #888;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-detail-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.task-detail-date {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.task-status {
+  font-size: 18px;
+  color: #28a745;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btn-login {
+  background-color: #28a745;
+}
+
+.btn-login:hover {
+  background-color: #218838;
+}
+
+.btn-logout {
+  background-color: #c53f3b;
+}
+
+.btn-logout:hover {
+  background-color: #982622;
+}
+
+.btn-add-task:hover {
+  background-color: #218838;
+}
+
+.btn-edit {
+  background-color: #007bff;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-back {
+  background-color: #6c757d;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form p {
+  font-size: 16px;
+  color: #555;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form .btn-save {
+  background-color: #28a745;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: start;
+}
+
+form .btn-save:hover {
+  background-color: #218838;
+}
+
+form .btn-save:focus {
+  outline: none;
+}
+
+form .btn-save:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    padding: 20px;
+  }
+
+  h1.title {
+    font-size: 24px;
+  }
+}

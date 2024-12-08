@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="tasks">
+  <div class="container">
+    <div class="task__box">
+      <h1 class="title">Список задач</h1>
+      <a class="btn btn-add-task" href="{% url 'tasks:task_create' %}">Добавить задачу</a>
+    
+      <ul class="task-list">
+        {% for task in tasks %}
+          <li class="task-item">
+            <div class="task-info">
+              <a class="task-link" href="{% url 'tasks:task_detail' task.pk %}">{{ task.title }}</a>
+              <span>{{ task.description }}</span>
+            </div>
+            <p class="task-status">
+              {{ task.is_completed|yesno:"Выполнено, Не выполнено" }}
+            </p>
+          </li>
+        {% empty %}
+          <p>Список задач пуст</p>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

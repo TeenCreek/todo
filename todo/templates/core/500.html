@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Пользовательская ошибка 500{% endblock %}
+
+{% block content %}
+  <section class="error-page">
+    <div class="container">
+      <h1>
+        Возникла ошибка 500, сервер не может обработать запрос к сайту. 
+        Попробуйте вернуться позже
+      </h1>      
+      <a class="btn btn-back" href="{% url 'task_list' %}">Вернуться на главную</a>
+    </div>
+  </section>
+{% endblock %}

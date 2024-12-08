@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="title">{% if object %}Редактировать задачу {% else %}Создать задачу{% endif %}</h1>
+    <form class="task-form" method="post">
+      {{ form.as_p }} 
+      {% csrf_token %}
+      <button class="btn btn-save" type="submit">Сохранить</button>
+    </form>
+  </div>
+{% endblock %}

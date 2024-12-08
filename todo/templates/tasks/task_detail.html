@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="task_detail">
+    <div class="container">
+      <h1 class="page-title">{{ task.title }}</h1>
+      <p class="task-detail-description">{{ task.description }}</p>
+      <p class="task-detail-date">Создано: {{ task.created_at }}</p>
+      <p class="task-detail-date">Обновлено: {{ task.updated_at }}</p>
+      <p class="task-status">Статус: {{ task.is_completed|yesno:"Выполнено, Не выполнено" }}</p>
+    
+      <div class="task-actions">
+        <a class="btn btn-edit" href="{% url 'tasks:task_update' task.pk %}">Изменить</a>
+        <a class="btn btn-delete" href="{% url 'tasks:task_delete' task.pk %}">Удалить</a>
+        <a class="btn btn-back" href="{% url 'tasks:task_list' %}">К списку задач</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

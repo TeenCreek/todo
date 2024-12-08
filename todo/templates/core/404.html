@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Пользовательская ошибка 404{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h1>Ошибка 404. Страница не найдена</h1>
+      <p>Страницы с адресом {{ request.path }} не существует</p>  
+      <a href="{% url 'task_list' %}">Идите на главную</a>
+    </div>
+  </section>
+{% endblock %}
